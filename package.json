@@ -11,7 +11,11 @@
     "typeorm": "ts-node ./node_modules/expresso/node_modules/typeorm/cli.js",
     "lint": "eslint . --ext .ts,.tsx"
   },
-  "keywords": ["express", "framework", "example"],
+  "keywords": [
+    "express",
+    "framework",
+    "example"
+  ],
   "author": "Evan Darwin <evan@relta.net>",
   "license": "GPL-3.0-or-later",
   "devDependencies": {

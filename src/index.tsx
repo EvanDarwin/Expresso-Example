@@ -1,5 +1,6 @@
-import expresso, {connect, middleware} from "expresso";
-import routes from "./routes";
+import expresso, {connect, document, middleware} from "expresso";
+import {h} from "preact";
+import {DemoHomepage} from "./components/demo";
 
 // connect() loads the database connection
 connect().then(() => {
@@ -16,7 +17,8 @@ connect().then(() => {
     app.use(middleware.parsers.raw())
     app.use(middleware.parsers.json())
 
-    routes(app)
+    // demo homepage
+    app.get('/', async (req, res) => document(res, <DemoHomepage/>))
 
     app.use(middleware.static('./public'))
     app.listen(3000, () => console.log("Server listening..."))
