@@ -18,6 +18,8 @@ include:
 lint:
   stage: test
   allow_failure: true
+  pre_script:
+    - yarn global add typescript
   script:
     - yarn --frozen-lockfile
     - yarn lint --format gitlab
@@ -35,6 +37,8 @@ audit:
       dependency_scanning: gl-dependency-scanning-report.json
 test:
   stage: build
+  pre_script:
+    - yarn global add typescript
   script:
     - yarn global add typescript
     - yarn
