@@ -36,6 +36,7 @@ audit:
 test:
   stage: build
   script:
+    - yarn global add typescript
     - yarn
 sast:
   variables:
