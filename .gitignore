@@ -1,0 +1,10 @@
+# Code editors
+.idea/
+.vscode/
+.idea/
+*.iml
+
+# NodeJS
+node_modules/
+build/
+.env
