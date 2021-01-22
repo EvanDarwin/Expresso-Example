@@ -2,7 +2,6 @@ import {Component, h} from "preact";
 
 export class DemoLayout extends Component {
     render() {
-        throw new Error("yikes");
         return <html lang="en">
         <head>
             <title>Expresso Example Application</title>
