@@ -22,10 +22,6 @@ connect().then(() => {
         document(res, <DemoHomepage/>)
     )
 
-    app.get('/error', async (req, res) => {
-        throw new Error("error")
-    })
-
     app.use(middleware.static('./public'))
     app.use(middleware.simpleError())
     app.listen(3000, () => console.log("Server listening..."))
