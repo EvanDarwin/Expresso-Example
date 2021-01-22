@@ -18,8 +18,15 @@ connect().then(() => {
     app.use(middleware.parsers.json())
 
     // demo homepage
-    app.get('/', async (req, res) => document(res, <DemoHomepage/>))
+    app.get('/', async (req, res) =>
+        document(res, <DemoHomepage/>)
+    )
+
+    app.get('/error', async (req, res) => {
+        throw new Error("error")
+    })
 
     app.use(middleware.static('./public'))
+    app.use(middleware.simpleError())
     app.listen(3000, () => console.log("Server listening..."))
 })
