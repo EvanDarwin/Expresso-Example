@@ -959,7 +959,7 @@ express@^4.17.1:
 
 "expresso@https://gitlab.com/Evan_Darwin/expresso.git#dev":
   version "0.1.0"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#0e9cf5ec0eeffeba2472ce2c9a1870d7a3e069ad"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#9aa7bfba8f4ac748453c63a73a1eb3ed1b7c40ee"
   dependencies:
     "@types/debug" "^4.1.5"
     "@types/minimist" "^1.2.1"
