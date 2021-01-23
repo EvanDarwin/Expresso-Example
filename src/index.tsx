@@ -23,5 +23,5 @@ connect().then(() => {
     app.use(middleware.static('./public'))
     app.use(middleware.notFound())
     app.use(middleware.error())
-    app.listen(3000, () => console.log("Server listening..."))
+    app.listen(3000, () => console.log("Expresso application is ready!"))
 })
