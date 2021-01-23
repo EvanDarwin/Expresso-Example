@@ -1,9 +1,9 @@
 import {ExpressoRequest} from "expresso";
-import {Component, h} from "preact";
+import {Component, h, VNode} from "preact";
 import {DemoLayout} from "../layout/DemoLayout";
 
 export class DemoHomepage extends Component<{ req: ExpressoRequest }> {
-    render() {
+    render(): VNode {
         const {req} = this.props;
         return <DemoLayout>
             <style>{"h1 { font-weight: bold; }"}</style>

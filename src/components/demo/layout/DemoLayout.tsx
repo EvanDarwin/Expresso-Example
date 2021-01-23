@@ -1,7 +1,7 @@
-import {Component, h} from "preact";
+import {Component, h, VNode} from "preact";
 
 export class DemoLayout extends Component {
-    render() {
+    render(): VNode {
         return <html lang="en">
         <head>
             <title>Expresso Example Application</title>
