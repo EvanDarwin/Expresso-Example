@@ -13,6 +13,11 @@
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "strict": true,
+      "strictPropertyInitialization": false,
+      "strictBindCallApply": true,
+      "strictFunctionTypes": true,
+      "strictNullChecks": true,
       "sourceMap": true
    }
 }
