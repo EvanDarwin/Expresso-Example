@@ -1,4 +1,4 @@
-import expresso, {connect, document, middleware} from "expresso";
+import expresso, {connect, middleware} from "expresso";
 import {h} from "preact";
 import {DemoHomepage} from "./components/demo";
 
@@ -18,9 +18,7 @@ connect().then(() => {
     app.use(middleware.parsers.json())
 
     // demo homepage
-    app.get('/', async (req, res) =>
-        document(res, <DemoHomepage/>)
-    )
+    app.get('/', async (req, res) => res.send(<DemoHomepage req={req}/>))
 
     app.use(middleware.static('./public'))
     app.use(middleware.simpleError())
