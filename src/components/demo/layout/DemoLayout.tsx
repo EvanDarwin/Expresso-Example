@@ -9,11 +9,7 @@ export class DemoLayout extends Component {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta name="description" content="Welcome to the demo of the expresso framework"/>
         </head>
-        <body style={{
-            backgroundColor: '#333',
-            color: '#fff',
-            font: 'Arial'
-        }}>{this.props.children}</body>
+        <body style={{backgroundColor: '#333', color: '#fff'}}>{this.props.children}</body>
         </html>
     }
 }
