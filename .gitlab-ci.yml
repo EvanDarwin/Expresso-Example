@@ -35,8 +35,25 @@ audit:
   artifacts:
     reports:
       dependency_scanning: gl-dependency-scanning-report.json
-test:
+test-node-12:
   stage: build
+  image: node:12
+  before_script:
+    - yarn global add typescript
+  script:
+    - yarn global add typescript
+    - yarn
+test-node-13:
+  stage: build
+  image: node:13
+  before_script:
+    - yarn global add typescript
+  script:
+    - yarn global add typescript
+    - yarn
+test-node-14:
+  stage: build
+  image: node:14
   before_script:
     - yarn global add typescript
   script:
