@@ -959,7 +959,7 @@ express@^4.17.1:
 
 "expresso@https://gitlab.com/Evan_Darwin/expresso.git#dev":
   version "0.1.0"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#a52cd8a2c69c6e95a9197c444af388cac293704c"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#c9c244e5c1b4bf2884ce34238e88b86a78d15664"
   dependencies:
     "@types/debug" "^4.1.5"
     "@types/express" "^4.17.11"
@@ -968,6 +968,8 @@ express@^4.17.1:
     debug "^4.3.1"
     dotenv "^8.2.0"
     express "^4.17.1"
+    helmet "^4.4.1"
+    jsx-xml "^0.2.3"
     minimist "^1.2.5"
     preact-render-to-string "^5.1.12"
     pretty-exceptions "^1.4.5"
@@ -1188,6 +1190,11 @@ has-yarn@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/has-yarn/-/has-yarn-2.1.0.tgz#137e11354a7b5bf11aa5cb649cf0c6f3ff2b2e77"
   integrity sha512-UqBRqi4ju7T+TqGNdqAO0PaSVGsDGJUBQvk9eUWNGRY1CFGDzYhLWoM7JQEemnlvVcv/YEmc2wNW8BC24EnUsw==
+
+helmet@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.4.1.tgz#a17e1444d81d7a83ddc6e6f9bc6e2055b994efe7"
+  integrity sha512-G8tp0wUMI7i8wkMk2xLcEvESg5PiCitFMYgGRc/PwULB0RVhTP5GFdxOwvJwp9XVha8CuS8mnhmE8I/8dx/pbw==
 
 highlight.js@^10.0.0:
   version "10.5.0"
@@ -1410,6 +1417,14 @@ json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
+
+jsx-xml@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/jsx-xml/-/jsx-xml-0.2.3.tgz#e4ec565651845bc6d58084ec24bab7f7b688b4c3"
+  integrity sha512-njKmhyJ0zymzpDjc9KvK+gSAb77vZxfO4iLpkJwYGmVWYr13PUYocJGweamaVPGJkFbLNN9qtnRCpqJzYsa3pA==
+  dependencies:
+    lodash "^4.17.15"
+    xmlbuilder "^13.0.2"
 
 keyv@^3.0.0:
   version "3.1.0"
@@ -2486,6 +2501,11 @@ xml2js@^0.4.23:
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
+
+xmlbuilder@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-13.0.2.tgz#02ae33614b6a047d1c32b5389c1fdacb2bce47a7"
+  integrity sha512-Eux0i2QdDYKbdbA6AM6xE4m6ZTZr4G4xF9kahI2ukSEMCzwce2eX9WlTI5J3s+NU7hpasFsr8hWIONae7LluAQ==
 
 xmlbuilder@~11.0.0:
   version "11.0.1"
