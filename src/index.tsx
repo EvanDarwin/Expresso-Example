@@ -21,6 +21,7 @@ connect().then(() => {
     app.get('/', async (req, res) => res.send(<DemoHomepage req={req}/>))
 
     app.use(middleware.static('./public'))
-    app.use(middleware.simpleError())
+    app.use(middleware.notFound())
+    app.use(middleware.error())
     app.listen(3000, () => console.log("Server listening..."))
 })
