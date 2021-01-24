@@ -1,25 +1,22 @@
-# You can override the included template(s) by including variable overrides
-# See https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
-# Note that environment variables can be set in several places
-# See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
-image: node:latest
+image: node:14
+
 stages:
   - test
   - build
+
 cache:
   paths:
-    - node_modules/
-    - ".yarn"
     - build
+    - .yarn
     - tsconfig.tsbuildinfo
+
 include:
-  - template: Dependency-Scanning.gitlab-ci.yml
   - template: Security/SAST.gitlab-ci.yml
+
 lint:
   stage: test
-  allow_failure: true
   before_script:
-    - yarn global add typescript
+    - rm -rf dist
   script:
     - yarn --frozen-lockfile
     - yarn lint --format gitlab
@@ -28,6 +25,7 @@ lint:
       - gl-codequality.json
     reports:
       codequality: gl-codequality.json
+
 audit:
   stage: test
   script:
@@ -35,33 +33,22 @@ audit:
   artifacts:
     reports:
       dependency_scanning: gl-dependency-scanning-report.json
-test-node-12:
-  stage: build
-  image: node:12
-  before_script:
-    - yarn global add typescript
-  script:
-    - yarn global add typescript
-    - yarn
-test-node-13:
-  stage: build
-  image: node:13
-  before_script:
-    - yarn global add typescript
-  script:
-    - yarn global add typescript
-    - yarn
-test-node-14:
-  stage: build
-  image: node:14
-  before_script:
-    - yarn global add typescript
-  script:
-    - yarn global add typescript
-    - yarn
+
 sast:
+  stage: test
   variables:
     SAST_EXCLUDED_ANALYZERS: bandit, brakeman, flawfinder, gosec, kubesec, phpcs-security-audit,
       pmd-apex, security-code-scan, sobelow, spotbugs
     SAST_EXCLUDED_PATHS: build, node_modules
-  stage: test
+
+test:
+  stage: build
+  needs: [ lint ]
+  before_script:
+    - rm -rf dist
+  script:
+    - yarn --frozen-lockfile
+    - yarn test:coverage
+  artifacts:
+    reports:
+      junit: test-results.xml

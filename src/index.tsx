@@ -1,29 +1,29 @@
-import expresso, {connect, ExpressoRequest, ExpressoResponse, middleware} from "expresso";
+import expresso, {ExpressoRequest, ExpressoResponse, middleware} from "expresso";
 import {h} from "preact";
-import {DemoHomepage} from "./components/demo";
+import {Homepage} from "./components";
 
-// connect() loads the database connection
-connect().then(() => {
-    const app = expresso({
-        env: {
-            CUSTOM_TEST: {
-                default: "environment variable!",
-                required: true,
-            }
-        }
-    });
+/**
+ * To begin using TypeORM and loading the database connection, first ensure that
+ * you have configured your `ormconfig.json` properly in the root of your project.
+ *
+ * Next, uncomment the `connect()` and matching line at the end to wrap the application
+ * in the TypeORM connection.
+ */
 
+// connect().then(() => {
+(() => {
+    const app = expresso();
+    app.use(middleware.parsers.urlencoded({extended: false}))
     app.use(middleware.helmet())
-    app.use(middleware.parsers.raw())
-    app.use(middleware.parsers.json())
 
     // demo homepage
     app.get('/', async (req: ExpressoRequest, res: ExpressoResponse) => {
-        res.send(<DemoHomepage req={req}/>)
+        res.send(<Homepage req={req}/>)
     })
 
-    app.use(middleware.static('./public'))
+    app.use(middleware.static('./static'))
     app.use(middleware.notFound())
     app.use(middleware.error())
     app.listen(3000, () => console.log("Expresso application is ready!"))
-})
+})()
+// })
