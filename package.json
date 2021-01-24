@@ -44,7 +44,7 @@
     "express": "^4.17.1",
     "expresso": "https://gitlab.com/Evan_Darwin/expresso.git#master",
     "pg": "^8.5.1",
-    "preact": "^10.5.10",
+    "preact": "^10.5.11",
     "typeorm": "0.2.30"
   }
 }
