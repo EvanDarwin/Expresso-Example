@@ -18,7 +18,7 @@ lint:
   stage: test
   allow_failure: true
   before_script:
-    - yarn global add typescript
+    - rm -rf dist
   script:
     - yarn --frozen-lockfile
     - yarn lint --format gitlab
@@ -47,9 +47,9 @@ test:
   stage: build
   needs: [ lint ]
   before_script:
-    - yarn global add typescript
+    - rm -rf dist
   script:
-    - yarn
+    - yarn --frozen-lockfile
     - yarn test:coverage
   artifacts:
     reports:
