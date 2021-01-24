@@ -958,8 +958,8 @@ express@^4.17.1:
     vary "~1.1.2"
 
 "expresso@https://gitlab.com/Evan_Darwin/expresso.git#master":
-  version "0.1.0"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#c7a6409d74640bce3a6f3224caa37b321298f824"
+  version "0.1.1"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#6a66513124ad1d8cff225129a670b0fe744c1bc3"
   dependencies:
     "@types/debug" "^4.1.5"
     "@types/express" "^4.17.11"
@@ -975,6 +975,7 @@ express@^4.17.1:
     pretty-exceptions "^1.4.5"
     reflect-metadata "^0.1.13"
     tslog "^3.1.0"
+    typescript "^4.1.3"
     uuid "^8.3.2"
   optionalDependencies:
     typeorm "^0.2.30"
@@ -2364,7 +2365,7 @@ typeorm@0.2.30, typeorm@^0.2.30:
     yargonaut "^1.1.2"
     yargs "^16.0.3"
 
-typescript@4.1.3:
+typescript@4.1.3, typescript@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
   integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
