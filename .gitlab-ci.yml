@@ -1,4 +1,4 @@
-image: node:latest
+image: node:14
 
 stages:
   - test
@@ -6,9 +6,8 @@ stages:
 
 cache:
   paths:
-    - node_modules/
-    - ".yarn"
     - build
+    - .yarn
     - tsconfig.tsbuildinfo
 
 include:
@@ -16,7 +15,6 @@ include:
 
 lint:
   stage: test
-  allow_failure: true
   before_script:
     - rm -rf dist
   script:
