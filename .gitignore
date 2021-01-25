@@ -4,6 +4,12 @@
 .idea/
 *.iml
 
+# Static
+static/**/*.css
+static/**/*.js
+# add your exclusions here
+#!static/file/to/keep.js
+
 # NodeJS
 node_modules/
 build/

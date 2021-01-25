@@ -4,7 +4,7 @@
     "ts",
     "tsx"
   ],
-  "file": "./src/_test.ts",
+  "file": "./node_modules/expresso/dist/mocha.js",
   "package": "./package.json",
   "reporter": "spec",
   "slow": 250,

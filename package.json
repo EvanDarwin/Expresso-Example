@@ -1,17 +1,22 @@
 {
   "name": "expresso-demo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An example of an expresso application",
   "main": "build/index.js",
   "scripts": {
-    "install": "tsc -b -v .",
+    "test": "ts-mocha",
+    "test:coverage": "nyc --reporter=text-summary ts-mocha --reporter=mocha-junit-reporter",
+    "install": "tsc -b .",
+    "lint": "eslint . --ext .ts,.tsx",
     "start": "node build/index.js",
     "start:dev": "ts-node src/index.tsx",
-    "watch": "nodemon -r ts-node/register ./src/index.tsx",
-    "typeorm": "ts-node ./node_modules/expresso/node_modules/typeorm/cli.js",
-    "lint": "eslint . --ext .ts,.tsx",
-    "test": "ts-mocha",
-    "test:coverage": "nyc --reporter=text-summary ts-mocha --reporter=mocha-junit-reporter"
+    "compile": "run-p compile:sass",
+    "compile:sass": "expresso compile:sass",
+    "watch": "run-p watch:app watch:sass",
+    "watch:app": "nodemon -x ts-node ./src/index.tsx",
+    "watch:sass": "nodemon -e 'sass,scss,css' -w 'sass' --exec expresso compile:sass",
+    "expresso": "node ./node_modules/expresso/dist/bin/index.js",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js"
   },
   "keywords": [
     "express",
@@ -34,6 +39,7 @@
     "mocha": "^8.2.1",
     "mocha-junit-reporter": "^2.0.0",
     "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
     "ts-mocha": "^8.0.0",
     "ts-node": "9.1.1",
@@ -42,7 +48,7 @@
   "dependencies": {
     "@types/express": "^4.17.11",
     "express": "^4.17.1",
-    "expresso": "https://gitlab.com/Evan_Darwin/expresso.git#master",
+    "expresso": "https://gitlab.com/Evan_Darwin/expresso.git#0.1.2",
     "pg": "^8.5.1",
     "preact": "^10.5.11",
     "typeorm": "0.2.30"
