@@ -1446,7 +1446,7 @@ express@^4.17.1:
 
 "expresso@https://gitlab.com/Evan_Darwin/expresso.git#dev":
   version "0.1.2"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#1041038e58c9b563cb5bc711c92f2e79b2d4c673"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#32bee73c8c587b1fe7e02685e62dc5f880c13cda"
   dependencies:
     "@types/body-parser" "^1.19.0"
     "@types/debug" "^4.1.5"
@@ -3695,9 +3695,9 @@ tslog@^3.1.0:
     source-map-support "^0.5.19"
 
 tsutils@^3.17.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.19.1.tgz#d8566e0c51c82f32f9c25a4d367cd62409a547a9"
-  integrity sha512-GEdoBf5XI324lu7ycad7s6laADfnAqCw6wLGI+knxvw9vsIYBaJfYdmeCEG3FMMUiSm3OGgNb+m6utsWf5h9Vw==
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.20.0.tgz#ea03ea45462e146b53d70ce0893de453ff24f698"
+  integrity sha512-RYbuQuvkhuqVeXweWT3tJLKOEJ/UUw9GjNEZGWdrLLlM+611o1gwLHBpxoFJKKl25fLprp2eVthtKs5JOrNeXg==
   dependencies:
     tslib "^1.8.1"
 
