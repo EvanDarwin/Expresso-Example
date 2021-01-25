@@ -1444,9 +1444,9 @@ express@^4.17.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-"expresso@https://gitlab.com/Evan_Darwin/expresso.git#dev":
+"expresso@https://gitlab.com/Evan_Darwin/expresso.git#0.1.2":
   version "0.1.2"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#32bee73c8c587b1fe7e02685e62dc5f880c13cda"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#8e27c995c62525a4a17433e7d3e43d1422a4bc5e"
   dependencies:
     "@types/body-parser" "^1.19.0"
     "@types/debug" "^4.1.5"
