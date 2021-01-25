@@ -1446,7 +1446,7 @@ express@^4.17.1:
 
 "expresso@https://gitlab.com/Evan_Darwin/expresso.git#dev":
   version "0.1.2"
-  resolved "https://gitlab.com/Evan_Darwin/expresso.git#8a3255a404b4a7b55f955210e1864e3e0ed6a9d9"
+  resolved "https://gitlab.com/Evan_Darwin/expresso.git#1041038e58c9b563cb5bc711c92f2e79b2d4c673"
   dependencies:
     "@types/body-parser" "^1.19.0"
     "@types/debug" "^4.1.5"

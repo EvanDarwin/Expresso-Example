@@ -14,7 +14,7 @@
     "compile:sass": "expresso compile:sass",
     "watch": "run-p watch:app watch:sass",
     "watch:app": "nodemon -x ts-node ./src/index.tsx",
-    "watch:sass": "nodemon -e 'sass,scss,css' -w 'sass' -x expresso -- sass:compile",
+    "watch:sass": "nodemon -e 'sass,scss,css' -w 'sass' --exec expresso compile:sass",
     "expresso": "node ./node_modules/expresso/dist/bin/index.js",
     "typeorm": "ts-node ./node_modules/typeorm/cli.js"
   },
